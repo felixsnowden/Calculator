@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-double a;
+﻿double a;
 double b;
 double c;
 
@@ -9,10 +8,13 @@ Console.Write("Write second number: ");
 b = double.Parse(Console.ReadLine());
 
 Console.Write("Write operator: ");
-char operat = char.Parse(Console.ReadLine());
+char operat = Console.ReadLine()[0];
 
 switch (operat)
 {
+    default:
+        Console.WriteLine("Unknown operator");
+        break;
     case '*':
         c = a * b;
         Console.WriteLine(c);
@@ -26,7 +28,14 @@ switch (operat)
         Console.WriteLine(c);
         break;
     case '/':
-        c = a / b;
-        Console.WriteLine(c);
+        if (b == 0)
+        {
+            Console.WriteLine("Cannot be divided by 0");
+        }
+        else
+        {
+            c = a / b;
+            Console.WriteLine(c);
+        }
         break;
 }
