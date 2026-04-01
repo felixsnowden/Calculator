@@ -3,13 +3,13 @@
 Console.Write("Write first number: ");
 if (!double.TryParse(Console.ReadLine(), out double a))
 {
-    Console.WriteLine("Це не число!");
+    Console.WriteLine("This is not a number!");
     return;
 }
 Console.Write("Write second number: ");
 if (!double.TryParse(Console.ReadLine(), out double b))
 {
-    Console.WriteLine("Це не число!");
+    Console.WriteLine("This is not a number!");
     return;
 }
 
