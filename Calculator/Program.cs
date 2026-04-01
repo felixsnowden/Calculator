@@ -1,11 +1,19 @@
 ﻿double a;
 double b;
-double c;
+double c = 0;
 
 Console.Write("Write first number: ");
-a = double.Parse(Console.ReadLine());
+if (!double.TryParse(Console.ReadLine(), out double a))
+{
+    Console.WriteLine("Це не число!");
+    return;
+}
 Console.Write("Write second number: ");
-b = double.Parse(Console.ReadLine());
+if (!double.TryParse(Console.ReadLine(), out double b))
+{
+    Console.WriteLine("Це не число!");
+    return;
+}
 
 Console.Write("Write operator: ");
 char operat = Console.ReadLine()[0];
