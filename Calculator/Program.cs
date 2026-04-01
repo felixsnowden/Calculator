@@ -1,6 +1,4 @@
-﻿double a;
-double b;
-double c = 0;
+﻿double c = 0;
 
 Console.Write("Write first number: ");
 if (!double.TryParse(Console.ReadLine(), out double a))
